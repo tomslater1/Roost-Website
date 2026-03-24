@@ -73,16 +73,6 @@ export default function HowItWorks() {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* Connector line — desktop only */}
-          <motion.div
-            className="hidden md:block absolute top-7 left-[calc(33.33%+1rem)] right-[calc(33.33%+1rem)] h-px bg-border"
-            aria-hidden="true"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease, delay: 0.5 }}
-            style={{ transformOrigin: "left" }}
-          />
 
           {steps.map((step) => (
             <motion.div

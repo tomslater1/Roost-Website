@@ -2,24 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Light mode tokens ─────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ebe3d5;
+  --foreground: #3d3229;
+  --card: #f2ebe0;
+  --primary: #d4795e;
+  --primary-foreground: #f2ebe0;
+  --secondary: #9db19f;
+  --secondary-foreground: #3d3229;
+  --muted: #ddd4c6;
+  --muted-foreground: #6b6157;
+  --accent: #e8d5bc;
+  --accent-foreground: #3d3229;
+  --destructive: #c75146;
+  --border: rgba(61, 50, 41, 0.15);
+  --input: #e3d9ca;
+  --ring: rgba(212, 121, 94, 0.3);
+  --radius: 0.875rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Dark mode tokens ───────────────────────────────────────────────────── */
+.dark {
+  --background: #0f0d0b;
+  --foreground: #f2ebe0;
+  --card: #1a1816;
+  --primary: #d4795e;
+  --primary-foreground: #f2ebe0;
+  --secondary: #7a8c7c;
+  --secondary-foreground: #f2ebe0;
+  --muted: #2a2623;
+  --muted-foreground: #a39a8f;
+  --accent: #2a2623;
+  --accent-foreground: #f2ebe0;
+  --destructive: #c75146;
+  --border: rgba(242, 235, 224, 0.08);
+  --input: #1f1c19;
+  --ring: rgba(212, 121, 94, 0.3);
+}
+
+/* ─── Base reset ─────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Utilities ──────────────────────────────────────────────────────────── */
 @layer utilities {
   .text-balance {
     text-wrap: balance;

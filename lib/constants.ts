@@ -1,4 +1,4 @@
 export const APP_NAME = "Roost";
 export const APP_VERSION = "1.0.0";
 export const TAGLINE = "Your home, in sync.";
-export const DOWNLOAD_URL = "#";
+export const DOWNLOAD_URL = "https://github.com/tomslater1/Roost/releases/latest/download/Roost.dmg";
